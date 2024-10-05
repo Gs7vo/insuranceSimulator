@@ -1,4 +1,4 @@
-# Simulador de Seguros T-Insurance (.NET Framework) - Télos
+# Simulador de Seguros T-Insurance - Télos 💼🏦
 
 Este repositório contém o código para a criação de um simulador de seguros da empresa fictícia **T-Insurance**. O sistema foi desenvolvido com foco em proporcionar uma experiência ágil e intuitiva aos usuários.
 
