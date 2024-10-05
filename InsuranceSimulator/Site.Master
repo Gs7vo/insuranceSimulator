@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="InsuranceSimulator.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head runat="server">
+    <!-- UTF-8 responsividade -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+    <meta name="description" content="Simule e escolha o seguro ideal para você de forma rápida e descomplicada com a T-Insurance." /> 
+    
+    
+    <title>T-Insurance</title> 
+    
+    
+    <asp:ContentPlaceHolder ID="head" runat="server" /> 
+
+    
+    <link href="~/CSS/StyleSheet1.css" rel="stylesheet" /> 
+
+
+    <script type="text/javascript"> 
+
+        // Função JS para formatar o CPF
+        function mascaraCPF(cpf) { 
+            
+            cpf.value = cpf.value.replace(/\D/g, '')
+                .replace(/(\d{3})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d)/, '$1.$2')
+                .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        }
+
+        // Função JS para formatar a Data de nascimento
+        function mascaraData(data) { 
+            
+            data.value = data.value.replace(/\D/g, '')
+                .replace(/(\d{2})(\d)/, '$1/$2')
+                .replace(/(\d{2})(\d)/, '$1/$2');
+        }
+    </script>
+</head>
+
+<body>
+    <form runat="server">
+       
+        <header>
+            <div class="logo-title">
+                
+                <img src="https://yt3.googleusercontent.com/l3o5-Cla7oc400UyhIvhHXZu2qKOSQGFQeSELh2eqQzTBJ0T_co0etf_Yt3iVO3qdAeLGlKfniE=s900-c-k-c0x00ffffff-no-rj" alt="Logo" class="logo-img" />  
+                
+                <h1>T-Insurance</h1>
+            </div>
+        </header>
+
+        
+        <main>
+            
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        
+        <footer>
+            <p>&copy; 2024 - Télos Insurance Company</p> 
+        </footer>
+    </form>
+</body>
+</html>
